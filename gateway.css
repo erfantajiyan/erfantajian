@@ -126,24 +126,3 @@ body{
   *{ transition:none !important; }
 }
 
-
-.language-btn{
-    position: fixed;
-    top:20px;
-    left:20px;
-
-    padding:10px 18px;
-
-    background:#222;
-    color:#fff;
-
-    text-decoration:none;
-
-    border-radius:8px;
-
-    transition:.3s;
-}
-
-.language-btn:hover{
-    background:#444;
-}
