@@ -19,14 +19,21 @@
   scene.add(fill);
   scene.add(new THREE.AmbientLight(0x12161a, 0.7));
 
-  // Signature: a precision "gauge" assembly — concentric rings with tick marks,
-  // reading as an instrument dial rendered in wireframe.
+  // Signature: a mechanical "inspection gauge" — hex-nut core, gear-tooth ring,
+  // and a pointer, reading clearly as an engineering/inspection instrument.
   const group = new THREE.Group();
 
-  const coreGeo = new THREE.OctahedronGeometry(1.15, 0);
-  const coreMat = new THREE.MeshStandardMaterial({ color:0xedeff0, flatShading:true, metalness:0.3, roughness:0.4 });
+  const coreGeo = new THREE.CylinderGeometry(1.05, 1.05, 0.55, 6);
+  const coreMat = new THREE.MeshStandardMaterial({ color:0xc7ccd0, flatShading:true, metalness:0.65, roughness:0.3 });
   const core = new THREE.Mesh(coreGeo, coreMat);
+  core.rotation.x = Math.PI/2;
   group.add(core);
+
+  const boreGeo = new THREE.CylinderGeometry(0.45, 0.45, 0.6, 24);
+  const boreMat = new THREE.MeshStandardMaterial({ color:0x12161a, metalness:0.2, roughness:0.6 });
+  const bore = new THREE.Mesh(boreGeo, boreMat);
+  bore.rotation.x = Math.PI/2;
+  group.add(bore);
 
   const ringGeo1 = new THREE.TorusGeometry(2.0, 0.02, 8, 100);
   const ringMat1 = new THREE.MeshBasicMaterial({ color:0x4c7a96, transparent:true, opacity:0.85 });
@@ -45,19 +52,19 @@
   ring3.rotation.y = Math.PI/5;
   group.add(ring3);
 
-  // Tick marks around the outer ring
-  const tickMat = new THREE.MeshBasicMaterial({ color:0xf2c230 });
-  const tickGeo = new THREE.BoxGeometry(0.03, 0.18, 0.03);
-  const tickCount = 24;
-  for (let i=0; i<tickCount; i++){
-    const a = (i/tickCount) * Math.PI * 2;
-    const tick = new THREE.Mesh(tickGeo, tickMat);
-    tick.position.set(Math.cos(a)*3.05, Math.sin(a)*3.05, 0);
-    tick.rotation.z = a;
-    group.add(tick);
+  // Gear teeth around the outer ring — the detail that reads as "mechanical"
+  const toothMat = new THREE.MeshStandardMaterial({ color:0xf2c230, metalness:0.5, roughness:0.3 });
+  const toothGeo = new THREE.BoxGeometry(0.28, 0.42, 0.16);
+  const toothCount = 20;
+  for (let i=0; i<toothCount; i++){
+    const a = (i/toothCount) * Math.PI * 2;
+    const tooth = new THREE.Mesh(toothGeo, toothMat);
+    tooth.position.set(Math.cos(a)*3.05, Math.sin(a)*3.05, 0);
+    tooth.rotation.z = a;
+    group.add(tooth);
   }
 
-  // Needle
+  // Needle / inspection pointer
   const needleGeo = new THREE.ConeGeometry(0.05, 1.8, 8);
   const needleMat = new THREE.MeshStandardMaterial({ color:0xf2c230, metalness:0.5, roughness:0.25 });
   const needle = new THREE.Mesh(needleGeo, needleMat);
@@ -65,8 +72,8 @@
   needle.rotation.z = -0.6;
   group.add(needle);
 
-  const wireGeo = new THREE.IcosahedronGeometry(1.6, 0);
-  const wireMat = new THREE.MeshBasicMaterial({ color:0xedeff0, wireframe:true, transparent:true, opacity:0.25 });
+  const wireGeo = new THREE.IcosahedronGeometry(1.7, 0);
+  const wireMat = new THREE.MeshBasicMaterial({ color:0xedeff0, wireframe:true, transparent:true, opacity:0.15 });
   const wire = new THREE.Mesh(wireGeo, wireMat);
   group.add(wire);
 
