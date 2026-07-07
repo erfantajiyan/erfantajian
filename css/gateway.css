@@ -19,7 +19,7 @@ body{
   font-family:'JetBrains Mono', monospace;
   letter-spacing:0.02em;
   font-size:0.72rem;
-  direction:ltr;
+  direction:rtl;
   unicode-bidi:embed;
 }
 
