@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#171513"/>
+  <text x="400" y="230" text-anchor="middle" fill="#D6A76C" font-family="sans-serif" font-size="18" font-weight="600">Robotics 1395</text>
+  <text x="400" y="260" text-anchor="middle" fill="#5F584F" font-family="sans-serif" font-size="14">Replace with actual photo</text>
+  <circle cx="400" cy="160" r="40" fill="none" stroke="#2A2723" stroke-width="2"/>
+  <rect x="385" y="200" width="30" height="30" fill="none" stroke="#2A2723" stroke-width="2" rx="4"/>
+</svg>
