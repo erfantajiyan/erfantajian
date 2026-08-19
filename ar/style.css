@@ -1,0 +1,29 @@
+/* ============================================
+   Arabic (RTL) Overrides
+   Loaded AFTER ../style.css on the /ar page.
+   Arabic is RTL like Persian, so the base layout
+   stays the same — only typography is adjusted.
+   ============================================ */
+
+:root {
+    --font-fa: 'Tajawal', 'Vazirmatn', sans-serif;
+}
+
+/* Arabic script doesn't take negative letter-spacing well */
+.nav-logo,
+.hero-title,
+.section-title,
+.chapter-title,
+.project-title {
+    letter-spacing: 0;
+}
+
+/* Slightly taller line-height for Arabic readability */
+body {
+    line-height: 1.9;
+}
+
+/* Arabic glyphs sit deeper: give buttons a touch more breathing room */
+.btn {
+    line-height: 1.6;
+}

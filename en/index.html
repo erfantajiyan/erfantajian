@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عرفان تاجیان | Personal Portfolio</title>
-    <meta name="description" content="داستان مسیر عرفان تاجیان از رباتیک و بازی‌سازی تا طراحی، برنامه‌نویسی و هوش مصنوعی.">
+    <title>Erfan Tajian | Personal Portfolio</title>
+    <meta name="description" content="The story of Erfan Tajian's journey from robotics and game development to design, programming, and AI.">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="عرفان تاجیان | Personal Portfolio">
-    <meta property="og:description" content="داستان مسیر عرفان تاجیان از رباتیک و بازی‌سازی تا طراحی، برنامه‌نویسی و هوش مصنوعی.">
-    <meta property="og:image" content="assets/images/og-image.svg">
-    <meta property="og:url" content="https://erfantajian.com">
+    <meta property="og:title" content="Erfan Tajian | Personal Portfolio">
+    <meta property="og:description" content="The story of Erfan Tajian's journey from robotics and game development to design, programming, and AI.">
+    <meta property="og:image" content="../assets/images/og-image.svg">
+    <meta property="og:url" content="https://erfantajian.com/en/">
     
     <!-- Language Alternates -->
     <link rel="alternate" hreflang="fa" href="https://erfantajian.com/">
@@ -22,7 +22,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Styles -->
+    <!-- Styles: shared base + English (LTR) overrides -->
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -38,12 +39,12 @@
         <span class="progress-label">ERFAN TAJIAN</span>
         <div class="progress-bar">
             <div class="progress-track">
-                <span class="progress-year start">۲۰۱۵</span>
+                <span class="progress-year start">2015</span>
                 <div class="progress-line">
                     <div class="progress-fill" id="progressFill"></div>
                     <div class="progress-dot" id="progressDot"></div>
                 </div>
-                <span class="progress-year end">۲۰۲۶</span>
+                <span class="progress-year end">2026</span>
             </div>
         </div>
         <span class="progress-chapter" id="progressChapter">ROBOTICS</span>
@@ -52,26 +53,26 @@
     <!-- Header / Navigation -->
     <header class="header" id="header">
         <nav class="nav">
-            <a href="#hero" class="nav-logo">عرفان تاجیان</a>
+            <a href="#hero" class="nav-logo">Erfan Tajian</a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#story" class="nav-link">داستان</a></li>
-                <li><a href="#projects" class="nav-link">پروژه‌ ها</a></li>
-                <li><a href="#skills" class="nav-link">مهارت‌ ها</a></li>
-                <li><a href="#achievements" class="nav-link">دستاورد ها</a></li>
-                <li><a href="#contact" class="nav-link">ارتباط</a></li>
-                <li class="nav-langs" aria-label="انتخاب زبان">
-                    <button type="button" class="nav-lang-btn" aria-haspopup="true" aria-expanded="false" aria-label="انتخاب زبان">
-                        <span class="lang-current">FA</span>
+                <li><a href="#story" class="nav-link">Story</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-langs" aria-label="Select language">
+                    <button type="button" class="nav-lang-btn" aria-haspopup="true" aria-expanded="false" aria-label="Select language">
+                        <span class="lang-current">EN</span>
                         <span class="lang-caret" aria-hidden="true">▾</span>
                     </button>
                     <ul class="lang-dropdown">
-                        <li><a href="index.html" class="lang-option active" lang="fa" aria-current="page"><span>فارسی</span><span class="lang-option-code">FA</span></a></li>
-                        <li><a href="en/" class="lang-option" lang="en"><span>English</span><span class="lang-option-code">EN</span></a></li>
-                        <li><a href="ar/" class="lang-option" lang="ar"><span>العربية</span><span class="lang-option-code">AR</span></a></li>
+                        <li><a href="../index.html" class="lang-option" lang="fa"><span>فارسی</span><span class="lang-option-code">FA</span></a></li>
+                        <li><a href="index.html" class="lang-option active" lang="en" aria-current="page"><span>English</span><span class="lang-option-code">EN</span></a></li>
+                        <li><a href="../ar/" class="lang-option" lang="ar"><span>العربية</span><span class="lang-option-code">AR</span></a></li>
                     </ul>
                 </li>
             </ul>
-            <button class="nav-toggle" id="navToggle" aria-label="منو">
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -82,21 +83,21 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
         <ul class="mobile-menu-links">
-            <li><a href="#story" class="mobile-link">داستان</a></li>
-            <li><a href="#projects" class="mobile-link">پروژه‌ ها</a></li>
-            <li><a href="#skills" class="mobile-link">مهارت‌ ها</a></li>
-            <li><a href="#achievements" class="mobile-link">دستاورد ها</a></li>
-            <li><a href="#contact" class="mobile-link">ارتباط</a></li>
+            <li><a href="#story" class="mobile-link">Story</a></li>
+            <li><a href="#projects" class="mobile-link">Projects</a></li>
+            <li><a href="#skills" class="mobile-link">Skills</a></li>
+            <li><a href="#achievements" class="mobile-link">Achievements</a></li>
+            <li><a href="#contact" class="mobile-link">Contact</a></li>
             <li class="mobile-langs">
-                <div class="nav-langs" aria-label="انتخاب زبان">
-                    <button type="button" class="nav-lang-btn" aria-haspopup="true" aria-expanded="false" aria-label="انتخاب زبان">
-                        <span class="lang-current">FA</span>
+                <div class="nav-langs" aria-label="Select language">
+                    <button type="button" class="nav-lang-btn" aria-haspopup="true" aria-expanded="false" aria-label="Select language">
+                        <span class="lang-current">EN</span>
                         <span class="lang-caret" aria-hidden="true">▾</span>
                     </button>
                     <ul class="lang-dropdown">
-                        <li><a href="index.html" class="lang-option active" lang="fa" aria-current="page"><span>فارسی</span><span class="lang-option-code">FA</span></a></li>
-                        <li><a href="en/" class="lang-option" lang="en"><span>English</span><span class="lang-option-code">EN</span></a></li>
-                        <li><a href="ar/" class="lang-option" lang="ar"><span>العربية</span><span class="lang-option-code">AR</span></a></li>
+                        <li><a href="../index.html" class="lang-option" lang="fa"><span>فارسی</span><span class="lang-option-code">FA</span></a></li>
+                        <li><a href="index.html" class="lang-option active" lang="en" aria-current="page"><span>English</span><span class="lang-option-code">EN</span></a></li>
+                        <li><a href="../ar/" class="lang-option" lang="ar"><span>العربية</span><span class="lang-option-code">AR</span></a></li>
                     </ul>
                 </div>
             </li>
@@ -108,51 +109,51 @@
         <!-- Hero Section -->
         <section class="hero" id="hero">
             <div class="hero-content">
-                <p class="hero-greeting">سلام، من عرفانم.</p>
+                <p class="hero-greeting">Hi, I'm Erfan.</p>
                 <h1 class="hero-title">
-                     همیشه دنبال<br>
-                    ساختن چیزهای جدید بودم.
+                    I've always been looking for<br>
+                    new things to build.
                 </h1>
                 <p class="hero-subtitle">
-                   از رباتیک و بازی‌سازی ،<br>
-                   تا هنر، برنامه‌نویسی<br>
-                   و هوش مصنوعی.
+                   From robotics and game development,<br>
+                   to art, programming,<br>
+                   and AI.
                 </p>
                 <div class="hero-cta">
-                    <a href="#story" class="btn btn-primary">داستان من ↓</a>
-                    <a href="#projects" class="btn btn-secondary">کارهای من ↓</a>
+                    <a href="#story" class="btn btn-primary">My Story ↓</a>
+                    <a href="#projects" class="btn btn-secondary">My Work ↓</a>
                 </div>
             </div>
             <div class="hero-timeline-preview">
                 <div class="hero-timeline-line"></div>
-                <div class="hero-timeline-item" data-year="۲۰۱۵">
+                <div class="hero-timeline-item" data-year="2015">
                     <span class="ht-dot"></span>
-                    <span class="ht-year">۱۳۹۴</span>
+                    <span class="ht-year">2015</span>
                     <span class="ht-label">Robotics</span>
                 </div>
-                <div class="hero-timeline-item" data-year="۲۰۱۷">
+                <div class="hero-timeline-item" data-year="2017">
                     <span class="ht-dot"></span>
-                    <span class="ht-year">۱۳۹۶</span>
+                    <span class="ht-year">2017</span>
                     <span class="ht-label">Game Development</span>
                 </div>
-                <div class="hero-timeline-item" data-year="۲۰۲۰">
+                <div class="hero-timeline-item" data-year="2020">
                     <span class="ht-dot"></span>
-                    <span class="ht-year">۱۳۹۹</span>
+                    <span class="ht-year">2020</span>
                     <span class="ht-label">Art + Web</span>
                 </div>
-                <div class="hero-timeline-item" data-year="۲۰۲۱">
+                <div class="hero-timeline-item" data-year="2021">
                     <span class="ht-dot"></span>
-                    <span class="ht-year">۱۴۰۰</span>
+                    <span class="ht-year">2021</span>
                     <span class="ht-label">Teams</span>
                 </div>
-                <div class="hero-timeline-item" data-year="۲۰۲۴">
+                <div class="hero-timeline-item" data-year="2024">
                     <span class="ht-dot"></span>
-                    <span class="ht-year">۱۴۰۳</span>
+                    <span class="ht-year">2024</span>
                     <span class="ht-label">University</span>
                 </div>
-                <div class="hero-timeline-item" data-year="۲۰۲۶">
+                <div class="hero-timeline-item" data-year="2026">
                     <span class="ht-dot"></span>
-                    <span class="ht-year">۱۴۰۵</span>
+                    <span class="ht-year">2026</span>
                     <span class="ht-label">AI</span>
                 </div>
             </div>
@@ -161,8 +162,8 @@
         <!-- Story Intro -->
         <section class="section-intro" id="intro">
             <div class="container">
-                <h2 class="section-title reveal">داستان من</h2>
-                <p class="section-subtitle reveal">اینجا مسیر من از اولین رباتی که ساختم تا چیزهایی که امروز با هوش مصنوعی می‌ سازم روایت می‌ شود.</p>
+                <h2 class="section-title reveal">My Story</h2>
+                <p class="section-subtitle reveal">This is where my journey is told — from the first robot I built to the things I'm building with AI today.</p>
             </div>
         </section>
 
@@ -179,38 +180,38 @@
                         </div>
                         <div class="chapter-content">
                             <div class="chapter-meta">
-                                <span class="chapter-number">۰۱</span>
-                                <span class="chapter-date">۱۳۹۴ - ۱۳۹۵</span>
+                                <span class="chapter-number">01</span>
+                                <span class="chapter-date">2015 – 2016</span>
                             </div>
-                            <h3 class="chapter-title">بچه‌ای که ربات می‌ساخت</h3>
+                            <h3 class="chapter-title">The kid who built robots</h3>
                             <div class="chapter-body">
-                                <p>از بچگی عاشق رباتیک بودم. سال ۹۴ و ۹۵ در مسابقات رباتیک آراد، در بخش ربات فوتبالیست، شرکت کردم و رتبه ۵ و ۴ کشوری گرفتم.</p>
+                                <p>I've loved robotics since childhood. In 2015 and 2016, I competed in the Arad robotics competition in the soccer robot category and placed 5th and 4th nationally.</p>
                                 <blockquote class="chapter-highlight">
-                                    آنجا فهمیدم چقدر دوست دارم با دست‌هایم چیزی بسازم که حرکت کند.
+                                    That's where I realized how much I love building something with my own hands that moves.
                                 </blockquote>
                                 <div class="chapter-achievements">
                                     <div class="achievement-badge">
-                                        <span class="badge-year">۱۳۹۴</span>
-                                        <span class="badge-text">رتبه ۵ کشوری</span>
+                                        <span class="badge-year">2015</span>
+                                        <span class="badge-text">5th place nationally</span>
                                     </div>
                                     <div class="achievement-badge">
-                                        <span class="badge-year">۱۳۹۵</span>
-                                        <span class="badge-text">رتبه ۴ کشوری</span>
+                                        <span class="badge-year">2016</span>
+                                        <span class="badge-text">4th place nationally</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="chapter-artifact">
                                 <div class="artifact-card">
-                                    <img src="assets/images/robotics-1.svg" alt="اولین تجربه‌های من با رباتیک" loading="lazy">
-                                    <span class="artifact-caption">اولین تجربه‌های من با رباتیک — ۱۳۹۵</span>
+                                    <img src="../assets/images/robotics-1.svg" alt="My first robotics experiences" loading="lazy">
+                                    <span class="artifact-caption">My first robotics experiences — 2016</span>
                                 </div>
         
                                 <div class="artifact-card">
-                                    <img src="assets/images/robotics-2.svg" alt="مسابقات رباتیک آراد" loading="lazy">
-                                    <span class="artifact-caption">مسابقات رباتیک </span>
+                                    <img src="../assets/images/robotics-2.svg" alt="Arad robotics competition" loading="lazy">
+                                    <span class="artifact-caption">Arad robotics competition</span>
                                 </div>
 
-                                <span class="chapter-annotation">← اولین رباتی که ساختم</span>
+                                <span class="chapter-annotation">The first robot I built →</span>
                             </div>
                             
                         </div>
@@ -224,13 +225,13 @@
                         </div>
                         <div class="chapter-content">
                             <div class="chapter-meta">
-                                <span class="chapter-number">۰۲</span>
-                                <span class="chapter-date">۱۳۹۶ - ۱۳۹۸</span>
+                                <span class="chapter-number">02</span>
+                                <span class="chapter-date">2017 – 2019</span>
                             </div>
-                            <h3 class="chapter-title">وقتی فهمیدم کد به تنهایی کافی نیست</h3>
+                            <h3 class="chapter-title">When I realized code alone wasn't enough</h3>
                             <div class="chapter-body">
-                                <p>سال ۹۶ آزمون ورودی دوره اول متوسطه را خراب کردم. اما همان سال دوستم علی من را با Unity آشنا کرد.</p>
-                                <p>اینجا بود که فهمیدم فقط کد زدن برایم کافی نیست؛ من به هنر هم علاقه دارم.</p>
+                                <p>In 2017, I failed the middle school entrance exam. But that same year, my friend Ali introduced me to Unity.</p>
+                                <p>That's when I realized that just writing code wasn't enough for me — I love art too.</p>
                                 <div class="chapter-skills">
                                     <span class="skill-tag">Photoshop</span>
                                     <span class="skill-tag">Illustrator</span>
@@ -240,16 +241,16 @@
                                     <span class="skill-tag">Unity</span>
                                 </div>
                                 <blockquote class="chapter-highlight">
-                                    اما دوست داشتنی ترین بخش برای من Level Design بود؛ جایی که کد و هنر به هم می‌رسند.
+                                    But my favorite part was Level Design — the place where code and art meet.
                                 </blockquote>
                             </div>
                             <div class="chapter-artifact">
                                 <div class="artifact-card">
-                                    <img src="assets/images/game-1.svg" alt="اولین پروژه‌های Unity" loading="lazy">
-                                    <span class="artifact-caption">اولین پروژه‌هایی که با Unity ساختم</span>
+                                    <img src="../assets/images/game-1.svg" alt="My first Unity projects" loading="lazy">
+                                    <span class="artifact-caption">The first projects I built with Unity</span>
                                 </div>
                                 <div class="artifact-card">
-                                    <img src="assets/images/game-2.svg" alt="Level Design" loading="lazy">
+                                    <img src="../assets/images/game-2.svg" alt="Level Design" loading="lazy">
                                     <span class="artifact-caption">Level Design</span>
                                 </div>
                             </div>
@@ -264,14 +265,14 @@
                         </div>
                         <div class="chapter-content">
                             <div class="chapter-meta">
-                                <span class="chapter-number">۰۳</span>
-                                <span class="chapter-date">۱۳۹۹ - ۱۴۰۰</span>
+                                <span class="chapter-number">03</span>
+                                <span class="chapter-date">2020 – 2021</span>
                             </div>
-                            <h3 class="chapter-title">سال سخت ولی شیرین</h3>
+                            <h3 class="chapter-title">A hard but sweet year</h3>
                             <div class="chapter-body">
-                                <p>کلاس نهم بودم و استرس امتحان ورودی متوسطه دوم شدید بود، اما بالاخره قبول شدم و وارد سمپاد شدم.</p>
-                                <p>همان سال در شرکت بازی‌ سازی Fani کارآموزی کردم و After Effects و Blender را یاد گرفتم.</p>
-                                <p>سال بعد وارد دنیای Full-Stack شدم.</p>
+                                <p>I was in ninth grade and the stress of the high school entrance exam was intense — but I made it and got into SAMPAD.</p>
+                                <p>That same year, I interned at the game studio Fani and learned After Effects and Blender.</p>
+                                <p>The next year, I entered the world of Full-Stack.</p>
                                 <div class="chapter-skills">
                                     <span class="skill-tag">HTML</span>
                                     <span class="skill-tag">CSS</span>
@@ -279,12 +280,12 @@
                                     <span class="skill-tag">Python</span>
                                     <span class="skill-tag">Django</span>
                                 </div>
-                                <p class="chapter-note">البته نتوانستم مسیر بک‌اند را به صورت کامل ادامه بدهم، چون مدرسه بخش زیادی از زمانم را گرفت.</p>
+                                <p class="chapter-note">Of course, I couldn't fully continue down the backend path, because school took up a big part of my time.</p>
                             </div>
                             <div class="chapter-artifact">
                                 <div class="artifact-card">
-                                    <img src="assets/images/web-1.svg" alt="ورود به دنیای وب" loading="lazy">
-                                    <span class="artifact-caption">شروع یادگیری Full-Stack</span>
+                                    <img src="../assets/images/web-1.svg" alt="Entering the world of web" loading="lazy">
+                                    <span class="artifact-caption">Starting to learn Full-Stack</span>
                                 </div>
                             </div>
                         </div>
@@ -298,26 +299,26 @@
                         </div>
                         <div class="chapter-content">
                             <div class="chapter-meta">
-                                <span class="chapter-number">۰۴</span>
-                                <span class="chapter-date">۱۴۰۱ - ۱۴۰۲</span>
+                                <span class="chapter-number">04</span>
+                                <span class="chapter-date">2022 – 2023</span>
                             </div>
-                            <h3 class="chapter-title">شروع یک تیم، شروع یک مسیر جدید</h3>
+                            <h3 class="chapter-title">The start of a team, the start of a new path</h3>
                             <div class="chapter-body">
-                                <p>اواخر ۱۴۰۰ در یک Game Show با حسام آشنا شدم. دو نفره تیم «شهر سوخته» را ساختیم و همان ابتدا رتبه اول را گرفتیم.</p>
-                                <p>این تیم بعدها به Asuri تبدیل شد و بزرگ‌ تر شد.</p>
-                                <p>در همین سال‌ها همراه علی و حسام وارد استارتاپ‌ های مختلف شدیم و در چند مسابقه و رقابت رتبه‌ های برتر گرفتیم.</p>
+                                <p>In late 2021, I met Hesam at a Game Show. The two of us formed the team "Shahr-e Soukhte" and took first place right from the start.</p>
+                                <p>This team later grew into Asuri.</p>
+                                <p>During these years, Ali, Hesam, and I joined various startups and earned top ranks in several competitions.</p>
                                 <blockquote class="chapter-highlight">
-                                    اینجا فهمیدم ساختن با تیم، ۱۰ برابر بیشتر از تنها ساختن می‌چسبد.
+                                    This is where I learned that building with a team is 10 times more enjoyable than building alone.
                                 </blockquote>
                             </div>
                             <div class="chapter-artifact">
                                 <div class="artifact-card">
-                                    <img src="assets/images/team-1.svg" alt="تیم Asuri" loading="lazy">
-                                    <span class="artifact-caption">تیم Asuri در حال ساختن</span>
+                                    <img src="../assets/images/team-1.svg" alt="Team Asuri" loading="lazy">
+                                    <span class="artifact-caption">Team Asuri building together</span>
                                 </div>
                                 <div class="artifact-card">
-                                    <img src="assets/images/team-2.svg" alt="Game Show" loading="lazy">
-                                    <span class="artifact-caption">رتبه اول در Game Show</span>
+                                    <img src="../assets/images/team-2.svg" alt="Game Show" loading="lazy">
+                                    <span class="artifact-caption">First place at Game Show</span>
                                 </div>
                             </div>
                         </div>
@@ -331,28 +332,28 @@
                         </div>
                         <div class="chapter-content">
                             <div class="chapter-meta">
-                                <span class="chapter-number">۰۵</span>
-                                <span class="chapter-date">۱۴۰۲ - ۱۴۰۴</span>
+                                <span class="chapter-number">05</span>
+                                <span class="chapter-date">2023 – 2025</span>
                             </div>
-                            <h3 class="chapter-title">سالی که همه چیز سخت شد</h3>
+                            <h3 class="chapter-title">The year everything got hard</h3>
                             <div class="chapter-body">
-                                <p>۱۴۰۱ سخت‌ترین سال زندگی من بود. نمی‌خواهم وارد جزئیات آن دوران شوم، اما مدتی از دنیایی که ساخته بودم فاصله گرفتم.</p>
-                                <p>با این حال تسلیم نشدم. تمرکزم را روی کنکور ۱۴۰۳ گذاشتم و در نهایت وارد دانشگاه صنعت نفت آبادان شدم.</p>
+                                <p>2022 was the hardest year of my life. I don't want to go into the details of that period, but for a while I distanced myself from the world I had built.</p>
+                                <p>Still, I didn't give up. I focused on the 2024 university entrance exam and finally got into Abadan University of Petroleum Industry.</p>
                                 <blockquote class="chapter-highlight">
-                                    حتی وقتی همه چیز تاریک است، هنوز می‌شود دوباره بلند شد.
+                                    Even when everything is dark, you can still get back up.
                                 </blockquote>
                             </div>
                             <div class="chapter-artifact">
                                 <div class="artifact-card artifact-card--minimal">
                                     <div class="artifact-text">
-                                        <span class="artifact-year">۱۴۰۱</span>
-                                        <span class="artifact-desc">دوره سخت</span>
+                                        <span class="artifact-year">2022</span>
+                                        <span class="artifact-desc">Hard time</span>
                                         <span class="artifact-divider">↓</span>
-                                        <span class="artifact-year">۱۴۰۳</span>
-                                        <span class="artifact-desc">بازگشت</span>
+                                        <span class="artifact-year">2024</span>
+                                        <span class="artifact-desc">Comeback</span>
                                         <span class="artifact-divider">↓</span>
-                                        <span class="artifact-year">۱۴۰۳</span>
-                                        <span class="artifact-desc">دانشگاه صنعت نفت آبادان</span>
+                                        <span class="artifact-year">2024</span>
+                                        <span class="artifact-desc">Abadan University of Petroleum Industry</span>
                                     </div>
                                 </div>
                             </div>
@@ -367,33 +368,33 @@
                         </div>
                         <div class="chapter-content">
                             <div class="chapter-meta">
-                                <span class="chapter-number">۰۶</span>
-                                <span class="chapter-date">۱۴۰۵ - ۱۴۰۶</span>
+                                <span class="chapter-number">06</span>
+                                <span class="chapter-date">2026 – 2027</span>
                             </div>
-                            <h3 class="chapter-title">برگشتن به ریشه‌ها با AI</h3>
+                            <h3 class="chapter-title">Returning to my roots with AI</h3>
                             <div class="chapter-body">
-                                <p>سال ۱۴۰۴ با  تیم Asuri  رفتیم سراغ ساخت گیم های بزرگ تر ، تیم بزرگ‌تر شده بود و روی پروژه SCP کار کردیم.</p>
-                                <p>اما بزرگ‌ ترین تغییر برای من در سال ۱۴۰۵ اتفاق افتاد. تصمیم گرفتم چیزهایی را که در طول سال‌ ها یاد گرفته بودم با هوش مصنوعی ترکیب کنم.</p>
+                                <p>In 2025, we started building bigger games with team Asuri — the team had grown and we worked on the SCP project.</p>
+                                <p>But the biggest change for me happened in 2026. I decided to combine everything I had learned over the years with AI.</p>
                                 
                                 <div class="chapter-projects">
                                     <div class="mini-project">
                                         <h4>Magic Note Pad</h4>
-                                        <p>یک دفترچه یادداشت با قابلیت جستجوی معنایی که با کمک AI ساخته‌ ام.</p>
+                                        <p>A note-taking app with semantic search that I built with the help of AI.</p>
                                     </div>
                                     <div class="mini-project">
                                         <h4>Prompt Search Engine</h4>
-                                        <p>یک موتور جستجو برای پیدا کردن بهترین Prompt ها.</p>
+                                        <p>A search engine for finding the best prompts.</p>
                                     </div>
                                 </div>
 
                                 <blockquote class="chapter-highlight">
-                                    اینجا دوباره فهمیدم که همه چیزهایی که در سال‌های مختلف یاد گرفته‌ام، می‌توانند کنار هم قرار بگیرند.
+                                    Here I realized once again that everything I've learned over the years can come together.
                                 </blockquote>
                             </div>
                             <div class="chapter-artifact">
                                 <div class="artifact-card">
-                                    <img src="assets/images/ai-1.svg" alt="AI Projects" loading="lazy">
-                                    <span class="artifact-caption">ترکیب همه تجربه‌ها با هوش مصنوعی</span>
+                                    <img src="../assets/images/ai-1.svg" alt="AI Projects" loading="lazy">
+                                    <span class="artifact-caption">Combining all my experience with AI</span>
                                 </div>
                             </div>
                         </div>
@@ -406,64 +407,64 @@
         <!-- Projects Section -->
         <section class="section-projects" id="projects">
             <div class="container">
-                <h2 class="section-title reveal">چیزهایی که ساختم</h2>
+                <h2 class="section-title reveal">Things I've Built</h2>
                 
                 <div class="projects-grid">
                     <!-- Project 01 -->
                     <article class="project-card reveal">
                         <div class="project-image">
-                            <img src="assets/images/project-1.svg" alt="Magic Note Pad" loading="lazy">
+                            <img src="../assets/images/project-1.svg" alt="Magic Note Pad" loading="lazy">
                         </div>
                         <div class="project-info">
-                            <span class="project-year">۲۰۲۶</span>
+                            <span class="project-year">2026</span>
                             <span class="project-number">PROJECT 01</span>
                             <h3 class="project-title">Magic Note Pad</h3>
-                            <p class="project-desc">یک دفترچه یادداشت دیجیتال که می‌توان در آن یادداشت نوشت و با استفاده از جستجوی معنایی، حتی زمانی که دقیقاً عبارت مورد نظر را به خاطر نداریم، محتوای مرتبط را پیدا کرد.</p>
+                            <p class="project-desc">A digital notebook where you can write notes and, using semantic search, find related content even when you don't remember the exact phrase.</p>
                             <div class="project-tech">
                                 <span>AI</span>
                                 <span>Semantic Search</span>
                                 <span>Python</span>
                                 <span>Web</span>
                             </div>
-                            <a href="#" class="project-link">مشاهده پروژه ←</a>
+                            <a href="#" class="project-link">View Project →</a>
                         </div>
                     </article>
 
                     <!-- Project 02 -->
                     <article class="project-card reveal">
                         <div class="project-image">
-                            <img src="assets/images/project-2.svg" alt="Prompt Search Engine" loading="lazy">
+                            <img src="../assets/images/project-2.svg" alt="Prompt Search Engine" loading="lazy">
                         </div>
                         <div class="project-info">
-                            <span class="project-year">۲۰۲۶</span>
+                            <span class="project-year">2026</span>
                             <span class="project-number">PROJECT 02</span>
                             <h3 class="project-title">Prompt Search Engine</h3>
-                            <p class="project-desc">موتور جستجویی که برای پیدا کردن و دسته‌بندی Promptهای کاربردی ساخته‌ام.</p>
+                            <p class="project-desc">A search engine I built to find and organize useful prompts.</p>
                             <div class="project-tech">
                                 <span>AI</span>
                                 <span>Search</span>
                                 <span>Prompt Engineering</span>
                             </div>
-                            <a href="#" class="project-link">جزئیات پروژه ←</a>
+                            <a href="#" class="project-link">Project Details →</a>
                         </div>
                     </article>
 
                     <!-- Project 03 -->
                     <article class="project-card reveal">
                         <div class="project-image">
-                            <img src="assets/images/project-3.svg" alt="SCP - Asuri Team" loading="lazy">
+                            <img src="../assets/images/project-3.svg" alt="SCP - Asuri Team" loading="lazy">
                         </div>
                         <div class="project-info">
-                            <span class="project-year">۲۰۲۵</span>
+                            <span class="project-year">2025</span>
                             <span class="project-number">PROJECT 03</span>
                             <h3 class="project-title">SCP</h3>
                             <span class="project-team">Team: Asuri</span>
-                            <p class="project-desc">TODO: توضیح دقیق پروژه SCP اضافه شود.</p>
+                            <p class="project-desc">TODO: Add a detailed description of the SCP project.</p>
                             <div class="project-tech">
                                 <span>Unity</span>
-                                <span>TODO: سایر تکنولوژی‌ها</span>
+                                <span>TODO: Other technologies</span>
                             </div>
-                            <a href="#" class="project-link">جزئیات پروژه ←</a>
+                            <a href="#" class="project-link">Project Details →</a>
                         </div>
                     </article>
                 </div>
@@ -473,31 +474,31 @@
         <!-- Skills Section -->
         <!-- <section class="section-skills" id="skills">
             <div class="container">
-                <h2 class="section-title reveal">چیزهایی که در مسیر یاد گرفتم</h2>
+                <h2 class="section-title reveal">Things I learned along the way</h2>
                 
                 <div class="skills-timeline reveal">
                     <div class="skills-item">
-                        <span class="skills-year">۲۰۱۵</span>
+                        <span class="skills-year">2015</span>
                         <span class="skills-name">Robotics</span>
                     </div>
                     <div class="skills-item">
-                        <span class="skills-year">۲۰۱۷</span>
+                        <span class="skills-year">2017</span>
                         <span class="skills-name">Unity + Game Design</span>
                     </div>
                     <div class="skills-item">
-                        <span class="skills-year">۲۰۱۸</span>
+                        <span class="skills-year">2018</span>
                         <span class="skills-name">Digital Art</span>
                     </div>
                     <div class="skills-item">
-                        <span class="skills-year">۲۰۲۰</span>
+                        <span class="skills-year">2020</span>
                         <span class="skills-name">Web + Blender</span>
                     </div>
                     <div class="skills-item">
-                        <span class="skills-year">۲۰۲۱</span>
+                        <span class="skills-year">2021</span>
                         <span class="skills-name">Team Building + Startups</span>
                     </div>
                     <div class="skills-item">
-                        <span class="skills-year">۲۰۲۵</span>
+                        <span class="skills-year">2025</span>
                         <span class="skills-name">AI + Search</span>
                     </div>
                 </div>
@@ -542,56 +543,56 @@
         <!-- Achievements Section -->
         <section class="section-achievements" id="achievements">
             <div class="container">
-                <h2 class="section-title reveal">چیزهایی که بهشان افتخار می‌کنم</h2>
+                <h2 class="section-title reveal">Things I'm Proud Of</h2>
                 
                 <div class="achievements-list reveal">
                     <div class="achievement-item">
-                        <span class="achievement-num">۰۱</span>
+                        <span class="achievement-num">01</span>
                         <div class="achievement-info">
-                            <h3 class="achievement-title">رتبه ۵ کشوری</h3>
-                            <span class="achievement-detail">مسابقات رباتیک آراد</span>
+                            <h3 class="achievement-title">5th place nationally</h3>
+                            <span class="achievement-detail">Arad robotics competition</span>
                         </div>
-                        <span class="achievement-year">۱۳۹۴</span>
+                        <span class="achievement-year">2015</span>
                     </div>
                     <div class="achievement-item">
-                        <span class="achievement-num">۰۲</span>
+                        <span class="achievement-num">02</span>
                         <div class="achievement-info">
-                            <h3 class="achievement-title">رتبه ۴ کشوری</h3>
-                            <span class="achievement-detail">مسابقات رباتیک آراد</span>
+                            <h3 class="achievement-title">4th place nationally</h3>
+                            <span class="achievement-detail">Arad robotics competition</span>
                         </div>
-                        <span class="achievement-year">۱۳۹۵</span>
+                        <span class="achievement-year">2016</span>
                     </div>
                     <div class="achievement-item">
-                        <span class="achievement-num">۰۳</span>
+                        <span class="achievement-num">03</span>
                         <div class="achievement-info">
-                            <h3 class="achievement-title">رتبه ۱</h3>
+                            <h3 class="achievement-title">1st place</h3>
                             <span class="achievement-detail">Game Show</span>
                         </div>
-                        <span class="achievement-year">۱۴۰۰</span>
+                        <span class="achievement-year">2021</span>
                     </div>
                     <div class="achievement-item">
-                        <span class="achievement-num">۰۴</span>
+                        <span class="achievement-num">04</span>
                         <div class="achievement-info">
-                            <h3 class="achievement-title">رتبه‌های برتر</h3>
-                            <span class="achievement-detail">استارتاپ‌های مختلف</span>
+                            <h3 class="achievement-title">Top ranks</h3>
+                            <span class="achievement-detail">Various startups</span>
                         </div>
-                        <span class="achievement-year">۱۴۰۰–۱۴۰۱</span>
+                        <span class="achievement-year">2021–2022</span>
                     </div>
                     <div class="achievement-item">
-                        <span class="achievement-num">۰۵</span>
+                        <span class="achievement-num">05</span>
                         <div class="achievement-info">
-                            <h3 class="achievement-title">قبولی</h3>
-                            <span class="achievement-detail">مدرسه سمپاد</span>
+                            <h3 class="achievement-title">Accepted</h3>
+                            <span class="achievement-detail">SAMPAD school</span>
                         </div>
-                        <span class="achievement-year">۱۳۹۹</span>
+                        <span class="achievement-year">2020</span>
                     </div>
                     <div class="achievement-item">
-                        <span class="achievement-num">۰۶</span>
+                        <span class="achievement-num">06</span>
                         <div class="achievement-info">
-                            <h3 class="achievement-title">قبولی</h3>
-                            <span class="achievement-detail">دانشگاه صنعت نفت آبادان</span>
+                            <h3 class="achievement-title">Accepted</h3>
+                            <span class="achievement-detail">Abadan University of Petroleum Industry</span>
                         </div>
-                        <span class="achievement-year">۱۴۰۳</span>
+                        <span class="achievement-year">2024</span>
                     </div>
                 </div>
             </div>
@@ -600,10 +601,10 @@
         <!-- Today Section -->
         <section class="section-today" id="today">
             <div class="container">
-                <h2 class="section-title reveal">امروز کجا هستم؟</h2>
+                <h2 class="section-title reveal">Where am I today?</h2>
                 
                 <div class="today-content reveal">
-                    <p class="today-text">امروز در نقطه‌ای هستم که چند مسیر مختلف زندگی‌ام به هم رسیده‌اند؛ برنامه‌نویسی، ساخت محصول، طراحی، بازی‌سازی و هوش مصنوعی.</p>
+                    <p class="today-text">Today, I'm at a point where several different paths of my life have come together: programming, building products, design, game development, and AI.</p>
                     
                     <div class="today-status">
                         <div class="status-item">
@@ -639,10 +640,10 @@
         <!-- Contact Section -->
         <section class="section-contact" id="contact">
             <div class="container">
-                <h2 class="section-title reveal">بیا با هم صحبت کنیم</h2>
+                <h2 class="section-title reveal">Let's Talk</h2>
                 
                 <div class="contact-content reveal">
-                    <p class="contact-text">اگر می‌خواهی با هم همکاری کنیم یا فقط می‌خواهی درباره ساختن یک چیز جدید گپ بزنیم، می‌توانی از طریق یکی از راه‌های زیر با من در ارتباط باشی.</p>
+                    <p class="contact-text">If you want to collaborate with me, or just chat about building something new, you can reach me through any of the channels below.</p>
                     
                     <div class="contact-links">
                         <a href="mailto:TODO" class="contact-link">
@@ -675,12 +676,12 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p class="footer-text">ساخته شده با ❤️ توسط عرفان تاجیان</p>
-            <span class="footer-year">۲۰۲۶</span>
+            <p class="footer-text">Built with ❤️ by Erfan Tajian</p>
+            <span class="footer-year">2026</span>
         </div>
     </footer>
 
     <!-- Script -->
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
 </body>
 </html>

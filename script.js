@@ -89,6 +89,54 @@
         });
     }
 
+    // --- Language Dropdown ---
+    const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+    document.querySelectorAll('.nav-langs').forEach(function (wrapper) {
+        const btn = wrapper.querySelector('.nav-lang-btn');
+        const dropdown = wrapper.querySelector('.lang-dropdown');
+        if (!btn || !dropdown) return;
+
+        function open() {
+            wrapper.classList.add('open');
+            btn.setAttribute('aria-expanded', 'true');
+        }
+
+        function close() {
+            wrapper.classList.remove('open');
+            btn.setAttribute('aria-expanded', 'false');
+        }
+
+        btn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            if (wrapper.classList.contains('open')) {
+                close();
+            } else {
+                open();
+            }
+        });
+
+        // Open on hover (desktop only)
+        if (canHover) {
+            wrapper.addEventListener('mouseenter', open);
+            wrapper.addEventListener('mouseleave', close);
+        }
+
+        // Close on outside click
+        document.addEventListener('click', function (e) {
+            if (!wrapper.contains(e.target)) {
+                close();
+            }
+        });
+
+        // Close on Escape
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                close();
+            }
+        });
+    });
+
     // --- Scroll Reveal ---
     const revealElements = document.querySelectorAll('.reveal');
 
@@ -160,7 +208,10 @@
     document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const href = this.getAttribute('href');
+            // Placeholder links like href="#" — nothing to scroll to
+            if (href.length < 2) return;
+            const target = document.querySelector(href);
             if (target) {
                 const offsetTop = target.offsetTop - 80;
                 window.scrollTo({

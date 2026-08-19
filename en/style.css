@@ -1,0 +1,87 @@
+/* ============================================
+   English (LTR) Overrides
+   Loaded AFTER ../style.css on the /en page.
+   The base stylesheet is written for RTL (Persian),
+   so every hard-coded direction is flipped here.
+   ============================================ */
+
+:root {
+    --font-fa: 'Inter', sans-serif;
+}
+
+/* Navigation underline grows from the left in LTR */
+.nav-link::after {
+    right: auto;
+    left: 0;
+}
+
+/* Progress indicator sits on the right in LTR */
+.progress-indicator {
+    left: auto;
+    right: var(--space-md);
+}
+
+/* Timeline: move rail + nodes to the left */
+.timeline {
+    padding-right: 0;
+    padding-left: 40px;
+}
+
+.timeline::before {
+    right: auto;
+    left: 15px;
+}
+
+.timeline-node {
+    right: auto;
+    left: -40px;
+}
+
+/* Chapter highlight border on the left in LTR */
+.chapter-highlight {
+    border-right: none;
+    border-left: 3px solid var(--accent);
+}
+
+/* Skills timeline borders */
+.skills-item {
+    border-right: none;
+    border-left: 2px solid var(--border);
+}
+
+.skills-item:hover {
+    border-left-color: var(--accent);
+}
+
+/* Alternate project cards: fully LTR in English */
+.project-card:nth-child(even),
+.project-card:nth-child(even) .project-info {
+    direction: ltr;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .project-card:nth-child(even) .project-info {
+        direction: ltr;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .timeline {
+        padding-left: 24px;
+    }
+
+    .timeline::before {
+        left: 8px;
+    }
+
+    .timeline-node {
+        left: -24px;
+    }
+
+    .skills-item {
+        border-left: none;
+        border-bottom: 1px solid var(--border);
+    }
+}
