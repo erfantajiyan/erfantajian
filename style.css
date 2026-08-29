@@ -89,7 +89,7 @@ body::after {
     content: '';
     position: fixed;
     inset: 0;
-    background-image: 
+    background-image:
         linear-gradient(var(--grid-color) 1px, transparent 1px),
         linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
     background-size: 80px 80px;
@@ -882,6 +882,19 @@ button {
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: var(--space-md);
     margin-top: var(--space-lg);
+    align-items: start;
+}
+
+.chapter-artifact .artifact-card {
+    align-self: start;
+}
+
+.chapter-artifact .artifact-card:nth-child(2) {
+    transform: translateY(var(--space-md));
+}
+
+.chapter-artifact .artifact-card:nth-child(2):hover {
+    transform: translateY(calc(var(--space-md) - 4px));
 }
 
 .artifact-card {
@@ -1192,7 +1205,7 @@ button {
     gap: 8px;
 }
 
-/* --- Achievements Section --- */
+/* --- Achievements Section --- */
 
 .achievements-list {
     display: flex;
@@ -1250,7 +1263,7 @@ button {
     white-space: nowrap;
 }
 
-/* --- Today Section --- */
+/* --- Today Section --- */
 
 .today-content {
     max-width: 700px;
@@ -1516,6 +1529,11 @@ button {
 
     .chapter-artifact {
         grid-template-columns: 1fr;
+    }
+
+    .chapter-artifact .artifact-card:nth-child(2),
+    .chapter-artifact .artifact-card:nth-child(2):hover {
+        transform: none;
     }
 
     .skills-timeline {
