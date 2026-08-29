@@ -1183,12 +1183,7 @@ button {
     gap: 8px;
 }
 
-/* --- Achievements Section --- */
-.section-achievements {
-    padding: var(--space-3xl) 0;
-    position: relative;
-    z-index: 1;
-}
+/* --- Achievements Section --- */
 
 .achievements-list {
     display: flex;
@@ -1246,12 +1241,7 @@ button {
     white-space: nowrap;
 }
 
-/* --- Today Section --- */
-.section-today {
-    padding: var(--space-3xl) 0;
-    position: relative;
-    z-index: 1;
-}
+/* --- Today Section --- */
 
 .today-content {
     max-width: 700px;
